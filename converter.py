@@ -29,3 +29,9 @@ if __name__ == "__main__":
         convert_and_resize_images(folder_path)
     else:
         print("The provided path is not a valid directory.")
+
+
+// for mysql ,snippet
+
+UPDATE static_pages SET attributes = REPLACE(REPLACE(REPLACE(REPLACE(REPLACE(attributes, '.png', '.webp'), '.jpg', '.webp'), '.jpeg', '.webp'), '.bmp', '.webp'), '.tiff', '.webp')
+WHERE attributes LIKE '%.png%' OR attributes LIKE '%.jpg%' OR attributes LIKE '%.jpeg%' OR attributes LIKE '%.bmp%' OR attributes LIKE '%.tiff%';
